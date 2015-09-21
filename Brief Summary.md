@@ -15,22 +15,22 @@ The runtime must remain as minimal as possible. The core of the runtime, "Runtim
 
 <b>Benefits</b>
 
-+ Previous plugin content can continue
++ Previous plugin content can continue. 
 Java, .NET (used by Unity3D and Silverlight), Flash etc all use virtual machines. WebIL essentially captures the essence of these and unifies them on the web, with the ideal goal of allowing existing plugin content to be simply converted for it to continue to operate when plugins are dropped from all browsers.
 
-+ Compactness
++ Compactness. 
 IL is compact; far more-so than asm.js for example.
 
-+ Platform optimisation
++ Platform optimisation. 
 If a platform doesn't support asm.js or WebAssembly for example, it can instead emit vanilla JS. This means it doesn't end up with the enormously bloated overhead of asm.js (or non-support of WebAssembly) and should essentially "just work", reaching maximum available performance on even the oldest of platforms.
 
-+ Code optimisation
++ Code optimisation. 
 Similarly, the IL can be pre-optimised during the (technically simple) conversion to webIL, plus the actual code will have passed through e.g. the Java compiler and have been optimised there too. The runtime will also "feature sniff" as it's emitting the output, meaning there's no overhead of checking what a browser does or does not support during code execution as those checks are performed only once. In other words, if(window.localStorage){}else if(window.File){} etc can be optimised out.
 
-+ Runtime Emit
++ Runtime Emit. 
 IL will be emittable at runtime, enabling for example .NET Reflection.Emit to be functional too, also allowing for modular code which can be live updated.
 
-+ Automatic GC
++ Automatic GC. 
 As the runtime performs garbage collection, your code doesn't need to include it.
 
-+ Any other ideas?
++ ..Any other ideas?
