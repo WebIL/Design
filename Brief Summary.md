@@ -3,7 +3,7 @@ The WebIL pipeline works roughly like the following:
 - A compiler which converts, for example, .NET DLLs into a .webil file and resources.
 - The webIL files get uploaded to a website, and are linked simply as:
 
-<script type='webIL' src='/myApp.webil'></script>
+&lt;script type='webIL' src='/myApp.webil'&gt;&lt;/script&gt;
 
 - The WebIL runtime, also included on the website, loads the webIL file(s).
 - The polyfill emits either normal Javascript, asm.js or WebAssembly.
