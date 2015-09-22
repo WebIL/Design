@@ -1,7 +1,7 @@
 The WebIL pipeline works roughly like the following:
 
 - A compiler which converts, for example, .NET DLLs into a .webil file and resources.
-- WebIL files are internally the same as [wasm](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md) ones, but may use a more GC specific set of opcodes. This project essentially encapsulates the higher level aspects such as GC and the conversion of higher level code (such as Java or .NET and their libraries). Think of it as an extension to WebAssembly, whereby .webil files always use GC.
+- WebIL files are internally almost the same as [wasm](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md) ones, but may use a more GC specific set of opcodes. This project essentially encapsulates the higher level aspects such as GC and the conversion of higher level code (such as Java or .NET and their libraries). Think of it as an extension to WebAssembly, whereby .webil files always use GC.
 - The webIL files get uploaded to a website, and are linked simply as:
 
 &lt;script type='webIL' src='/myApp.webil'&gt;&lt;/script&gt;
